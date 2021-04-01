@@ -16,6 +16,7 @@ import Deals from './Components/Deals/Deals';
 import Login from './Components/Login/Login';
 import Header from './Components/Header/Header';
 import { createContext, useState } from 'react';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 
 
@@ -25,7 +26,7 @@ function App() {
   const [loggedInUser,setLoggedInUser] = useState({});
   return (
     <UserContext.Provider value ={[loggedInUser,setLoggedInUser]}>
-      <h1>name:{loggedInUser.displayName}</h1>
+     
     
     <div class="container">
     <Router >
@@ -34,15 +35,15 @@ function App() {
         <Route path="/home">
         <Home/>
         </Route>
-        <Route path="/order">
+        <PrivateRoute path="/order">
         <Order/>
-        </Route>
-        <Route path="/admin">
+        </PrivateRoute>
+        <PrivateRoute path="/admin">
         <Admin/>
-        </Route>
-        <Route path="/deal">
+        </PrivateRoute>
+        <PrivateRoute path="/deal">
         <Deals/>
-        </Route>
+        </PrivateRoute>
         <Route path="/login">
         <Login/>
         </Route>
