@@ -16,7 +16,7 @@ const Deals = () => {
         const orderDetail = {
             ...loggedInUser,productDetail,shipment:data,orderTime:new Date()
         }
-        fetch('http://localhost:5055/addOrder',{
+        fetch('https://stormy-citadel-42524.herokuapp.com/addOrder',{
             method:'POST',
             headers:{
                 'Content-Type':'application/JSON'

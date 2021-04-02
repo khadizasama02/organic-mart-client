@@ -16,7 +16,7 @@ const Admin = () => {
             price:data.price,
             imageURL: imageUrl
         };
-        const url = `http://localhost:5055/addProduct`
+        const url = `https://stormy-citadel-42524.herokuapp.com/addProduct`
         
         fetch(url,{
             method:'POST',

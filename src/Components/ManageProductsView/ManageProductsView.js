@@ -9,7 +9,7 @@ const ManageProductsView = (props) => {
                         <td scope="row">{name}</td>
                         <td>{weight}</td>
                         <td>{price}</td>
-                        <td>action</td>
+                        <td><button class="btn btn-danger">update</button> <button class="btn btn-success">Delete</button></td>
                     </tr>
         
     );

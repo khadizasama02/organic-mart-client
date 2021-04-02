@@ -28,7 +28,7 @@ function App() {
   const [loggedInUser,setLoggedInUser] = useState({});
   const [products,setProducts] = useState([]);
   useEffect(()=>{
-    fetch('http://localhost:5055/products')
+    fetch('https://stormy-citadel-42524.herokuapp.com/products')
     .then(res=>res.json())
     .then(data=>setProducts(data))
        
