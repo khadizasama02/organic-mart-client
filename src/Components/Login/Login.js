@@ -57,8 +57,8 @@ const Login = () => {
     }
     return (
         <div>
-            <h1>this is log in</h1>
-            <div class="card w-50 mx-auto p-3" >
+           
+            <div class="card w-50 mx-auto p-3" style={{marginTop:"100px",background:"#F0FFF0"}}>
 
             
             <form>

@@ -23,9 +23,10 @@ const Header = () => {
                     <Nav className="mx-auto" inline>
                         <Link class="mx-2 text-dark" to="/home">Home</Link>
                         <Link class="mx-2 text-dark" to="/deal">Deals</Link>
-                        <Link class="mx-2 text-dark" to="/login">{(loggedInUser.email)?(loggedInUser.displayName):'Login'}</Link>
-                        <Link class="mx-2 text-dark" to="/admin">Admin</Link>
                         <Link class="mx-2 text-dark" to="/order">Orders</Link>
+                        <Link class="mx-2 text-dark" to="/admin">Admin</Link>
+                        
+                        <Link class="mx-2 text-dark" to="/login">{(loggedInUser.email)?(loggedInUser.displayName):'Login'}</Link>
                     </Nav> 
                    
                 </Navbar>

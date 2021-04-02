@@ -32,9 +32,9 @@ const Deals = () => {
     }
    
     return (
-        <div>
-            <h1>this is deal</h1>
-            <div class="card w-50 mx-auto">
+        <div >
+           
+            <div class="card w-50 mx-auto" style={{marginTop:"100px",background:"#F0FFF0"}}>
                 <h5 class="card-header text-center">Order confirmation</h5>
                 <form className="mx-auto w-50" onSubmit={handleSubmit(onSubmit)}>
                 <input name="name" defaultValue={loggedInUser.displayName} ref={register({ required: true })} placeholder="Your Name" />

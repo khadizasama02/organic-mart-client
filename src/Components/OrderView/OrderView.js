@@ -5,8 +5,8 @@ const OrderView = (props) => {
     const { _id, displayName, email, orderTime } = props.orders;
     return (
         <div>
-            <div class="card w-75 mx-auto" style={ {marginTop:"20px"}}>
-                <div class="card-body">
+            <div class="card w-75 mx-auto" style={ {marginTop:"20px",background:"#F0FFF0"}}>
+                <div class="card-body text-center">
                     <h4 class="card-title">Order Id:{_id}</h4>
                     <h5>Customer Name:{displayName}</h5>
                     <h5>Email:{email}</h5>

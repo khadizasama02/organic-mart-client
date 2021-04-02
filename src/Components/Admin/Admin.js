@@ -49,16 +49,16 @@ const Admin = () => {
             <div class="col-4" style={{background:"#7FFFD4"}}>
                 <h1 class="text-center">Organic Mart</h1>
              <ul style={{marginTop:"30px"}}>
-                 <Link to="/manageProduct"><li><h5>Manage</h5></li></Link>
+                 <Link to="/manageProduct"><li><h5>Manage Products</h5></li></Link>
                  <Link to="/admin"><li><h5>Add Product</h5></li></Link>
                  <li><h5>Edit Product</h5></li>
              </ul>
 
             </div>
             <div class="col-8">
-            <h1>Add product</h1>
-            <div class="card">
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <h1 class="text-center" style={{color:"#2F4F4F"}}>Add product</h1>
+            <div class="card" style={{background:"#F0FFF0",color:"#2F4F4F"}}>
+            <form onSubmit={handleSubmit(onSubmit)} style={{marginTop:"50px"}} class="mx-auto p-3">
               
               <input name="name" defaultValue="Product Name" ref={register} />
                <br/>
