@@ -28,7 +28,7 @@ const Login = () => {
         error: '',
         success: false
     })
-    const [loggedInUser,setLoggedInUser] = useContext(UserContext);
+    const [,,loggedInUser,setLoggedInUser] = useContext(UserContext);
 
     const handleSignIn = () =>
     {

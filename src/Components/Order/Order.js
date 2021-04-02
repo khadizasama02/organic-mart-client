@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../App';
+import Cart from '../Cart/Cart';
+import OrderView from '../OrderView/OrderView';
 
 const Order = () => {
+   const[products,,loggedInUser,setLoggedInUser] = useContext(UserContext)
+   const [orders,setOrders]= useState([])
+   useEffect(()=>{
+    fetch('http://localhost:5055/orders')
+    .then(res=>res.json())
+    .then(data=>setOrders(data))
+   },[])
+
+//   const {length}= props.cart;
+//  const cart = props.cart
+
     return (
         <div>
-            <h1>this is order</h1>
+            <h1 class="text-center">Order Information</h1>
+           
+        {
+            orders.map(orders=><OrderView orders={orders}></OrderView>)
+        }
+     
         </div>
     );
 };

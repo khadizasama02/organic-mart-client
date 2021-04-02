@@ -3,14 +3,14 @@ import { Nav, Navbar, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table,
 import { UserContext } from '../../App';
 
 const Header = () => {
-    const [loggedInUser,setLoggedInUser] = useContext(UserContext)
+    const [,,loggedInUser,setLoggedInUser] = useContext(UserContext)
     return (
         <div>
             <>
                 <Navbar bg="light" variant="light">
                     <Navbar.Brand href="/home"><div class="container-fluid">
                         <a class="navbar-brand" href="#">
-                            <img src="../../photo/LOGO.png" alt="" width="30" height="24" class="d-inline-block align-text-top"/>
+                           
                                 Oraganic Mart
                         </a>
                     </div></Navbar.Brand>

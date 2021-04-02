@@ -1,8 +1,12 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
+import ManageProduct from '../ManageProduct/ManageProduct';
 
 const Admin = () => {
+   
     const { register, handleSubmit, watch, errors } = useForm();
     const [imageUrl,setImageUrl] = useState(null)
     const onSubmit = data =>{
@@ -41,9 +45,14 @@ const Admin = () => {
           });
     }
     return (
-        <div class="row">
-            <div class="col-4">
-
+        <div class="row" style={{marginTop:"30px",height:"600px"}}>
+            <div class="col-4" style={{background:"#7FFFD4"}}>
+                <h1 class="text-center">Organic Mart</h1>
+             <ul style={{marginTop:"30px"}}>
+                 <Link to="/manageProduct"><li><h5>Manage</h5></li></Link>
+                 <Link to="/admin"><li><h5>Add Product</h5></li></Link>
+                 <li><h5>Edit Product</h5></li>
+             </ul>
 
             </div>
             <div class="col-8">

@@ -1,32 +1,43 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../App';
+import Cart from '../Cart/Cart';
 import ItemView from '../ItemView/ItemView';
 import './Home.css'
 
 const Home = () => {
-  const [products,setProducts] = useState([]);
-  useEffect(()=>{
-    fetch('http://localhost:5055/products')
-    .then(res=>res.json())
-    .then(data=>setProducts(data))
-       
-  },[])
- 
- 
+  const[products,,,]=useContext(UserContext)
+
+ const [cart,setCart]= useState([]);
+//  const handleAddProduct =(products)=>{
+//    console.log('product added',products);
+//    const newCart=[...cart,products]
+//    setCart(newCart)
+  
+//  }
     return (
       <div class="color">
+        {
+          products.length === 0 && <div class="d-flex justify-content-center" >
+          <div class="spinner-border  text-danger" role="status">
+           
+          </div>
+        </div>
+        }
       
         <div  class="row">
           {
             
-            products?
-            products.map(product=><ItemView products={product}></ItemView>):<div class="d-flex justify-content-center">
-            <div class="spinner-border" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
-          </div>
+           
+            products.map(product=><ItemView products={product}
+              // handleAddProduct={handleAddProduct}
+            ></ItemView>)
           }
         </div>
+        <div >
+        {/* <Cart cart={cart}></Cart> */}
+        </div>
+      
         </div> 
     );
 };

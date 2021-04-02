@@ -15,8 +15,10 @@ import Admin from './Components/Admin/Admin';
 import Deals from './Components/Deals/Deals';
 import Login from './Components/Login/Login';
 import Header from './Components/Header/Header';
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import CheckOut from './Components/CheckOut/CheckOut';
+import ManageProduct from './Components/ManageProduct/ManageProduct';
 
 
 
@@ -24,8 +26,16 @@ export const UserContext = createContext();
 
 function App() {
   const [loggedInUser,setLoggedInUser] = useState({});
+  const [products,setProducts] = useState([]);
+  useEffect(()=>{
+    fetch('http://localhost:5055/products')
+    .then(res=>res.json())
+    .then(data=>setProducts(data))
+       
+  },[])
+ 
   return (
-    <UserContext.Provider value ={[loggedInUser,setLoggedInUser]}>
+    <UserContext.Provider value ={[products,setProducts,loggedInUser,setLoggedInUser]}>
      
     
     <div class="container">
@@ -47,8 +57,11 @@ function App() {
         <Route path="/login">
         <Login/>
         </Route>
-        <Route path="/home">
-        <Home/>
+        <PrivateRoute path="/checkout/:_id">
+        <CheckOut/>
+        </PrivateRoute>
+        <Route path="/manageProduct">
+        <ManageProduct/>
         </Route>
       </Switch>
     </Router>
