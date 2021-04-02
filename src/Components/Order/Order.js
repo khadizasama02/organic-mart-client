@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { UserContext } from '../../App';
-import Cart from '../Cart/Cart';
+import React, {  useEffect, useState } from 'react';
+// import { UserContext } from '../../App';
+
 import OrderView from '../OrderView/OrderView';
 
 const Order = () => {
-   const[products,,loggedInUser,setLoggedInUser] = useContext(UserContext)
+//    const[products,,loggedInUser,setLoggedInUser] = useContext(UserContext)
    const [orders,setOrders]= useState([])
    useEffect(()=>{
     fetch('https://stormy-citadel-42524.herokuapp.com/orders')

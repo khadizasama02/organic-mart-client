@@ -2,15 +2,15 @@ import React, { useContext } from 'react';
 import { useParams } from 'react-router';
 import { UserContext } from '../../App';
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
+
 
 const Deals = () => {
-    const [products, , loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const [products, , loggedInUser, ] = useContext(UserContext)
     const { _id } = useParams();
     const productDetail = products.find(pd=>pd._id === _id)
     // console.log(productDetail);
 
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit,  errors } = useForm();
     const onSubmit = data => {
         // console.log(data);
         const orderDetail = {

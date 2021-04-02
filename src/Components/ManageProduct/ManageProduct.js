@@ -11,10 +11,10 @@ const ManageProduct = () => {
              <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">Product Name</th>
-                        <th scope="col">Weight</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Action</th>
+                        <th >Product Name</th>
+                        <th >Weight</th>
+                        <th>Price</th>
+                        <th >Action</th>
                     </tr>
                 </thead>
                 <tbody>

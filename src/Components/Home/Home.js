@@ -1,14 +1,14 @@
 
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext,  useState } from 'react';
 import { UserContext } from '../../App';
-import Cart from '../Cart/Cart';
+
 import ItemView from '../ItemView/ItemView';
 import './Home.css'
 
 const Home = () => {
   const[products,,,]=useContext(UserContext)
 
- const [cart,setCart]= useState([]);
+//  const [cart,setCart]= useState([]);
 //  const handleAddProduct =(products)=>{
 //    console.log('product added',products);
 //    const newCart=[...cart,products]

@@ -28,7 +28,8 @@ const Login = () => {
         error: '',
         success: false
     })
-    const [,,loggedInUser,setLoggedInUser] = useContext(UserContext);
+    console.log(user);
+    const [,,,setLoggedInUser] = useContext(UserContext);
 
     const handleSignIn = () =>
     {
@@ -36,8 +37,8 @@ const Login = () => {
         .signInWithPopup(provider)
         .then((result) => {
             console.log(result)
-          var credential = result.credential;
-          var token = credential.accessToken;
+        //   var credential = result.credential;
+        //   var token = credential.accessToken;
           var user = result.user;
           const {displayName ,email} = result.user;
           setUser(user)
@@ -47,10 +48,10 @@ const Login = () => {
           
         }).catch((error) => {
           
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          var email = error.email;
-          var credential = error.credential;
+        //   var errorCode = error.code;
+        //   var errorMessage = error.message;
+        //   var email = error.email;
+        //   var credential = error.credential;
           // ...
         });
     }
@@ -71,7 +72,7 @@ const Login = () => {
                         <input type="password" class="form-control" id="exampleInputPassword1"/>
                 </div>
                         
-                            <button type="submit" class="btn btn-primary w-75 ">Login</button>
+                            <button type="submit" class="btn btn-primary w-100 ">Login</button>
             </form>
             </div>
             <div style={{textAlign:"center",marginTop: "10px"}}>

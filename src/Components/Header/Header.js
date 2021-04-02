@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { Nav, Navbar, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Row, Col, Grid, Panel, FormGroup, FormControl } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 import { UserContext } from '../../App';
 
 const Header = () => {
-    const [,,loggedInUser,setLoggedInUser] = useContext(UserContext)
+    const [,,loggedInUser,] = useContext(UserContext)
     return (
         <div>
             <>
