@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useContext } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { UserContext } from '../../App';
@@ -8,23 +9,23 @@ const Header = () => {
         <div>
             <>
                 <Navbar bg="light" variant="light">
-                    <Navbar.Brand href="/home"><div class="container-fluid">
-                        <a class="navbar-brand" href="#">
+                    {/* <Navbar.Brand to="/home"><div class="container-fluid"> */}
+                        <h3 class="navbar-brand" >
                            
                                 Oraganic Mart
-                        </a>
-                    </div></Navbar.Brand>
+                        </h3>
+                    
                 {/* <nav class="navbar navbar-light bg-light">
                     
                     </nav> */}
 
 
                     <Nav className="mx-auto" inline>
-                        <Nav.Link href="/home">Home</Nav.Link>
-                        <Nav.Link href="/deal">Deals</Nav.Link>
-                        <Nav.Link href="/login">{(loggedInUser.email)?(loggedInUser.displayName):'Login'}</Nav.Link>
-                        <Nav.Link href="/admin">Admin</Nav.Link>
-                        <Nav.Link href="/order">Orders</Nav.Link>
+                        <Link class="mx-2 text-dark" to="/home">Home</Link>
+                        <Link class="mx-2 text-dark" to="/deal">Deals</Link>
+                        <Link class="mx-2 text-dark" to="/login">{(loggedInUser.email)?(loggedInUser.displayName):'Login'}</Link>
+                        <Link class="mx-2 text-dark" to="/admin">Admin</Link>
+                        <Link class="mx-2 text-dark" to="/order">Orders</Link>
                     </Nav> 
                    
                 </Navbar>

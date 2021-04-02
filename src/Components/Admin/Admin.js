@@ -1,13 +1,13 @@
 import axios from 'axios';
-import React, { useContext, useState } from 'react';
+import React, {  useState } from 'react';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
-import { UserContext } from '../../App';
-import ManageProduct from '../ManageProduct/ManageProduct';
+// import { UserContext } from '../../App';
+// import ManageProduct from '../ManageProduct/ManageProduct';
 
 const Admin = () => {
    
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit } = useForm();
     const [imageUrl,setImageUrl] = useState(null)
     const onSubmit = data =>{
         const productData = {
