@@ -8,7 +8,7 @@ Organic-Mart
 5.User can see the order details.
 6.There can be added more products to home page
 7.There has been create several component with dynamic route.
-9.There are  used firebase authentication
-10.the project has been hosted in netlify
+8.There are  used firebase authentication
+9.the project has been hosted in netlify
 ## website link
 https://organic-mart657.netlify.app/
